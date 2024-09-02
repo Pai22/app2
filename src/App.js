@@ -1,17 +1,17 @@
 import React from'react';
-//import Button from './class-components';
-//import { Calculator2 } from './calculator';
-//import { EvenData2 } from './event-data';
-//import RefsFunc from './refs-func';
-import MessageBox from './state-func';
+import { userContext } from './context';
+import Header2 from './context-header2';
+import Content2 from './context-content2';
+
 
 function App() {
+  let [user, setUser] = React.useState('')
   return (
-    //<Button />
-    //<Calculator2 />
-    //<EvenData2 />
-    //<RefsFunc />
-    <MessageBox />
+     <userContext.Provider value={[user,setUser]}>
+       <Header2 />
+       <Content2 />
+     </userContext.Provider>
+
   )
 }
 
